@@ -35,6 +35,5 @@
 		<module>itao-manager-dao</module>
 		<module>itao-manager-interface</module>
 		<module>itao-manager-service</module>
-		<module>itao-manager-web</module>
 	</modules>
 </project>

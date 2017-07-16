@@ -3,21 +3,32 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.itao</groupId>
-		<artifactId>itao-manager</artifactId>
+		<artifactId>itao-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>itao-manager-service</artifactId>
+	<artifactId>itao-manager-web</artifactId>
 	<packaging>war</packaging>
+
 	<dependencies>
-		<dependency>
-			<groupId>com.itao</groupId>
-			<artifactId>itao-manager-dao</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>com.itao</groupId>
 			<artifactId>itao-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- JSP相关 -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<!-- spring的依赖 -->
 		<!-- Spring -->
@@ -49,6 +60,5 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>
