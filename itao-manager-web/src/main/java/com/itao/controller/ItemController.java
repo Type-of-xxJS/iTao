@@ -24,6 +24,7 @@ public class ItemController {
 		return item;
 	}
 	@RequestMapping("/item/list")
+	@ResponseBody
 	public EasyUIDataGridResult getItemList(Integer page,Integer rows){
 		//调用服务查询商品列表
 		EasyUIDataGridResult result = itemService.getItemList(page, rows);

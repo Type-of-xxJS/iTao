@@ -18,9 +18,9 @@
 	
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="itao-manager-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.48.129:2181"/>	
+	<dubbo:registry protocol="zookeeper" address="192.168.48.130:2181"/>	
 	<dubbo:reference interface="com.itao.service.ItemService" id="itemService" />
 	
-	<mvc:resources location="/WEB-INF/js" mapping="/js/**"></mvc:resources>
-	<mvc:resources location="/WEB-INF/css" mapping="/css/**"></mvc:resources>
+	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
+	<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
 </beans>
