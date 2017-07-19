@@ -34,7 +34,7 @@ public class PictureController {
 			String originalFileName=uploadFile.getOriginalFilename();
 			String extName=originalFileName.substring(originalFileName.lastIndexOf('.')+1);
 			//得到一个图片的地址和文件名
-			String url=client.uploadFile(uploadFile.getBytes());
+			String url=client.uploadFile(uploadFile.getBytes(),extName);
 			//补充为完整url
 			url=IMAGE_SERVER_URL+url;
 			
