@@ -99,3 +99,4 @@ itao-manager/itao-manager-service/src/main/resources/conf/db.properties
 *.classpath
 itao-common/.project
 *.classpath
+*.project
