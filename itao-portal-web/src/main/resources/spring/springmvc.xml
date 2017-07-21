@@ -20,6 +20,5 @@
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="itao-portal-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.72.130:2181"/>	
-<!-- 	<dubbo:reference interface="com.itao.service.ItemService" id="itemService" /> -->
-
+	<dubbo:reference interface="com.itao.content.service.ContentService" id="contentService" />
 </beans>
