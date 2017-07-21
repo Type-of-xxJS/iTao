@@ -6,8 +6,9 @@
 	<display-name>itao-content</display-name>
 
 
-	<!-- 加载spring容器 -->
-	<!-- spring容器发布dubbo服务 -->
+	<!-- 1.初始化spring容器 -->
+	<!-- 2.然后spring容器发布dubbo服务 -->
+	<!-- 3.dubbo服务运行在不同的端口 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring/applicationContext*.xml</param-value>
