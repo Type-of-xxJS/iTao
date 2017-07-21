@@ -35,6 +35,7 @@ public class ContentServiceImpl implements ContentService {
 		contentMapper.insert(content);
 		//缓存同步
 		jedisClient.hdel(CONTENT_LIST, content.getCategoryId().toString());
+		System.out.println("同步缓存");
 		return E3Result.ok();
 	}
 
@@ -46,6 +47,7 @@ public class ContentServiceImpl implements ContentService {
 			String json=jedisClient.hget(CONTENT_LIST, cid+"");
 			if (StringUtils.isNoneBlank(json)) {
 				List<TbContent> list = JsonUtils.jsonToList(json, TbContent.class);
+				System.out.println("从缓存中获取");
 				return list;
 			}
 
@@ -61,6 +63,7 @@ public class ContentServiceImpl implements ContentService {
 		//把结果添加到缓存中去
 		try {
 			jedisClient.hset(CONTENT_LIST, cid+"", JsonUtils.objectToJson(list));
+			System.out.println("添加成功");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
