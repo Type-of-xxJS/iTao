@@ -26,7 +26,13 @@ public class SearchItemController {
 		E3Result result = searchItemService.importAllItems();
 		return result;
 	}
-	
+	/**
+	 * 搜索测试
+	 * <p>Title: searchItemList</p>
+	 * <p>Description: </p>
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping("/index/item/search")
 	@ResponseBody
 	public SearchResult searchItemList() throws Exception{

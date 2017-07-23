@@ -47,7 +47,7 @@ public class SearchItem implements Serializable{
 	}
 	
 	public String[] getImages(){
-		if (image!=null && "".equals(image)) {
+		if (image!=null && !"".equals(image)) {
 			String[] images=image.split(",");
 			return images;
 		}
