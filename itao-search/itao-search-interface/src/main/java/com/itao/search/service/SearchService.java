@@ -1,5 +1,7 @@
 package com.itao.search.service;
 
-public interface SearchService {
+import com.itao.common.pojo.SearchResult;
 
+public interface SearchService {
+	SearchResult search(String keyword,int page,int rows) throws Exception;
 }
