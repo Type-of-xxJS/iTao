@@ -2,11 +2,12 @@ package com.itao.search.service.impl;
 
 import org.apache.solr.client.solrj.SolrQuery;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.itao.common.pojo.SearchResult;
 import com.itao.search.dao.SearchDao;
 import com.itao.search.service.SearchService;
-
+@Service
 public class SearchServiceImpl implements SearchService {
 
 	@Autowired

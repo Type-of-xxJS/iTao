@@ -1,30 +1,40 @@
 package com.itao.search.controller;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-import org.quartz.spi.InstanceIdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.itao.common.pojo.SearchResult;
+import com.itao.content.service.ContentCategoryService;
+import com.itao.search.service.SearchItemService;
 import com.itao.search.service.SearchService;
 
 @Controller
 public class SearchController {
 
-	@Value("${SEARCH_RESULT_ROLWS}")
+	@Value("${SEARCH_RESULT_ROWS}")
 	private Integer SEARCH_RESULT_ROWS;
 	
 	@Autowired
 	private SearchService searchService;
+	//private SearchService searchService;
+	//private SearchItemService searchItemService;
 	
 	@RequestMapping("/search")
-	public String searchItem(String keyword,@RequestParam(defaultValue="1")Integer page,Model model) throws Exception{
-		
+	public String searchItemList(String keyword,@RequestParam(defaultValue="1")Integer page,Model model) throws Exception{
+		//get请求乱码，转化为utf-8
+		/*keyword=new String(keyword.getBytes("iso-8859-1"), "utf-8");
+		//查询商品列表
+		SearchResult searchResult = searchService.search(keyword, page, SEARCH_RESULT_ROWS);
+		//把结果传递给页面
+		model.addAttribute("query", keyword);
+		model.addAttribute("totalPages",searchResult.getTotalPages());
+		model.addAttribute("page", page);
+		model.addAttribute("recourdCount", searchResult.getRecordCount());
+		model.addAttribute("itemList", searchResult.getItemList());*/
 		//返回逻辑视图
 		return "search";
 	}

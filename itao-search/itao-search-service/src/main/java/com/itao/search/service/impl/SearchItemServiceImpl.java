@@ -5,12 +5,13 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.itao.common.pojo.SearchItem;
 import com.itao.common.utils.E3Result;
 import com.itao.search.mapper.ItemMapper;
 import com.itao.search.service.SearchItemService;
-
+@Service
 public class SearchItemServiceImpl implements SearchItemService{
 
 	@Autowired
