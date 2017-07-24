@@ -9,4 +9,5 @@ import com.itao.common.pojo.SearchResult;
 public interface ItemMapper {
 
 	List<SearchItem> getItemList();
+	SearchItem getItemById(long itemId);
 }
