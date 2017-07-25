@@ -54,6 +54,7 @@ public class ItemServiceImpl implements ItemService{
 		try {
 			//从缓存中取
 			String json = jedisClient.get(REDIS_ITEM_PRE + ":" + id + ":BASE");
+			System.out.println("从缓存中取-getItemById");
 			if(StringUtils.isNotBlank(json)) {
 				TbItem tbItem = JsonUtils.jsonToPojo(json, TbItem.class);
 				return tbItem;
@@ -130,6 +131,7 @@ public class ItemServiceImpl implements ItemService{
 		
 		try {
 			String json = jedisClient.get(REDIS_ITEM_PRE + ":" + itemId + ":DESC");
+			System.out.println("从缓存中取：getITemDescById");
 			if(StringUtils.isNotBlank(json)) {
 				TbItemDesc tbItemDesc = JsonUtils.jsonToPojo(json, TbItemDesc.class);
 				return tbItemDesc;
