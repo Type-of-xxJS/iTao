@@ -28,18 +28,12 @@
 	<bean id="topicDestination" class="org.apache.activemq.command.ActiveMQTopic">
 		<constructor-arg value="itemAddTopic" />
 	</bean>
-	<bean id="myMessageListener" class="com.itao.search.message.MyMessageListener"/>
-	<!-- 消息监听容器 -->
-	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
-		<property name="connectionFactory" ref="connectionFactory" />
-		<property name="destination" ref="queueDestination" />
-		<property name="messageListener" ref="myMessageListener" />
-	</bean>
-	<!-- 监听商品添加消息，同步索引库 -->
-	<bean id="itemAddMessageListener" class="com.itao.search.message.ItemAddMessageListener"/>
+	
+	<!-- 监听商品添加消息，生成静态页-->
+	<bean id="htmlGenListener" class="com.itao.item.listener.HtmlGenListener"/>
 	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="connectionFactory" />
 		<property name="destination" ref="topicDestination" />
-		<property name="messageListener" ref="itemAddMessageListener" />
+		<property name="messageListener" ref="htmlGenListener" />
 	</bean>
 </beans>

@@ -60,8 +60,10 @@ public class HtmlGenListener implements MessageListener {
 			template.process(data, out);
 			//关闭流
 			out.close();
+			System.out.println("静态页创建成功");
 			
 		} catch (Exception e) {
+			e.printStackTrace();
 			// TODO: handle exception
 		}
 
