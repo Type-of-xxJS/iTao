@@ -38,13 +38,15 @@ public class RegisterServiceImpl implements RegisterService {
 		if (!(boolean)result.getData()) {
 			return E3Result.build(400, "手机号已经被占用");
 		}
-		result = checkData(user.getEmail(), 3);
-		if (!(boolean)result.getData()) {
-			return E3Result.build(400, "邮箱已经被占用");
-		}
+		//TODO:异常了
+//		result = checkData(user.getEmail(), 3);
+//		if (!(boolean)result.getData()) {
+//			return E3Result.build(400, "邮箱已经被占用");
+//		}
 		
 		user.setCreated(new Date());
 		user.setUpdated(new Date());
+		//user.setEmail("aa@bb.com");
 		//对密码md5加密
 		user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
 		
