@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import com.itao.cart.service.CartService;
 import com.itao.common.jedis.JedisClient;
@@ -14,6 +15,7 @@ import com.itao.common.utils.JsonUtils;
 import com.itao.mapper.TbItemMapper;
 import com.itao.pojo.TbItem;
 
+@Service
 public class CartServiceImpl implements CartService{
 
 	@Autowired
