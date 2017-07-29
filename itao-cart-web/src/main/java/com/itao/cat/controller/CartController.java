@@ -26,8 +26,6 @@ import com.itao.service.ItemService;
 /**
  * 购物车处理Controller
  * <p>Title: CartController</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.cn</p> 
  * @version 1.0
  */
 @Controller
