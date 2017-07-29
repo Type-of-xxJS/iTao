@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.itao</groupId>
-		<artifactId>itao-cat</artifactId>
+		<artifactId>itao-cart</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>itao-cat-interface</artifactId>
+	<artifactId>itao-cart-interface</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.itao</groupId>

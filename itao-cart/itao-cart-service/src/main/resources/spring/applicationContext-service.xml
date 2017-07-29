@@ -10,7 +10,7 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<context:component-scan base-package="com.itao.cat.service" />
+	<context:component-scan base-package="com.itao.cart.service" />
 	
 	<!-- 使用dubbo发布服务 -->
 	<!-- 提供方应用信息，用于计算依赖关系 -->
@@ -20,5 +20,5 @@
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20884" />
 	<!-- 声明需要暴露的服务接口 -->
-	<!-- <dubbo:service interface="com.itao.content.service.ContentCategoryService" ref="contentCategoryServiceImpl" timeout="600000"/> -->
+<dubbo:service interface="com.itao.cart.service.CartService" ref="cartServiceImpl" timeout="600000"/>
 </beans>

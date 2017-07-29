@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.itao</groupId>
-		<artifactId>itao-cat</artifactId>
+		<artifactId>itao-cart</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>itao-cat-service</artifactId>
+	<artifactId>itao-cart-service</artifactId>
 	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
@@ -16,7 +16,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.itao</groupId>
-			<artifactId>itao-order-interface</artifactId>
+			<artifactId>itao-cart-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- spring的依赖 -->

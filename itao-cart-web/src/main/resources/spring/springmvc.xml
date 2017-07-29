@@ -26,7 +26,7 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 	<!-- 引用dubbo服务 -->
-	<dubbo:application name="itao-cat-web" />
+	<dubbo:application name="itao-cart-web" />
 	<dubbo:registry protocol="zookeeper" address="192.168.72.130:2181" />
 	<dubbo:reference interface="com.itao.service.ItemService"
 		id="itemService" />
