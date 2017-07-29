@@ -1,4 +1,4 @@
-package cn.e3mall.order.controller;
+package com.itao.order.controller;
 
 import java.util.List;
 
@@ -11,12 +11,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import cn.e3mall.cart.service.CartService;
-import cn.e3mall.common.utils.E3Result;
-import cn.e3mall.order.pojo.OrderInfo;
-import cn.e3mall.order.service.OrderService;
-import cn.e3mall.pojo.TbItem;
-import cn.e3mall.pojo.TbUser;
+import com.itao.cart.service.CartService;
+import com.itao.common.utils.E3Result;
+import com.itao.order.pojo.OrderInfo;
+import com.itao.order.service.OrderService;
+import com.itao.pojo.TbItem;
+import com.itao.pojo.TbUser;
 
 /**
  * 订单管理Controller
