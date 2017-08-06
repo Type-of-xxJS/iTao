@@ -5,3 +5,6 @@
 - SOA(dubbo+zookeeper)
 - Nginx
 - FastDFS
+- Redis緩存
+- 分佈式Session
+- ActiveMq
