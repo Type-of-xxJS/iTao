@@ -7,4 +7,5 @@
 - FastDFS
 - Redis緩存
 - 分佈式Session
+- 跨域jsonp
 - ActiveMq
